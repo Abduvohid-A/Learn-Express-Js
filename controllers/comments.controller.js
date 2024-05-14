@@ -5,8 +5,8 @@ export const getCommit = async (req, res) => {
     try {
         const result = await pool.query(allComments)
         res.status(200).send({ status: "OK", data: result.rows });
-    }catch (error) {
-        res.status(500).json({ error : error.massage })
+    } catch (error) {
+        res.status(500).json({ error: error.massage })
     }
 };
 

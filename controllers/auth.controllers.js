@@ -17,7 +17,7 @@ export const forRegister = async (req, res) => {
 
         const check = await pool.query(getEmail, [value.email]);
         console.log(check)
-        if(check.rows[0]) return res.status(400).json({ status : "This user is already exist"})
+        if (check.rows[0]) return res.status(400).json({ status: "This user is already exist" })
 
         const hashedPassword = await bcrypt.hash(value.password, 10);
         const created_at = new Date()
@@ -42,7 +42,7 @@ export const forLogin = async (req, res) => {
         const validPassword = await bcrypt.compare(password, results.rows[0].password);
         console.log(validPassword)
         if (!validPassword) return res.status(400).json({ status: "Incorrect password" });
-        res.status(200).json({status:"Seccessfull"})
+        res.status(200).json({ status: "Seccessfull" })
 
     } catch (error) {
         res.status(500).json({ error: error.massage })

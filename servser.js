@@ -9,5 +9,5 @@ app.use(express.json())
 
 app.use("/api", Routes)
 
-app.listen(process.env.PORT, ()=>{ console.log("Server ishlamoqda ...")});
+app.listen(process.env.PORT, () => { console.log("Server ishlamoqda ...") });
 
