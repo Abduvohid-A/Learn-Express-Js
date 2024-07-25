@@ -49,39 +49,6 @@ export const forLogin = async (req, res) => {
     }
 };
 
-/*
-TEKSHIRISH UCHUN 
-
-localhost:5000/api/login 
-{
-    "email": "azamat@gmail.com",
-    "password": "1234qwer"
-}
-
-{
-    "email": "abror@gmail.com",
-    "password": "qwedfhj"
-}
 
 
 
-localhost:5000/api/register
-{
-    "username": "Nodir",
-    "email": "nodir@gmail.com",
-    "password": "12345zxc"
-}
-
-{
-    "username": "Akmal",
-    "email": "akmal@gmail.com",
-    "password": "poiuytmn"
-}
-
-{
-    "username": "Abror",
-    "email": "abror@gmail.com",
-    "password": "qwedfhj"
-}
-
-*/
